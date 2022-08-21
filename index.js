@@ -23,12 +23,11 @@ document.addEventListener("keydown", function (event) {
       moveDodgerLeft();
     }
   });
-  function moveDodgerRight() {
-    const rightNumbers = dodger.style.right.replace("px", "");
-    const left = parseInt(rightNumbers, 10);
-  
-    if (left < 0) {
-      dodger.style.right = `${left + 1}px`;
-    }
-  }
+
+const moveDodgerRight = () => {
+	let left = dodger.style.left
+	left = parseInt(left)
+	dodger.style.left = `${left + 1}px`;
+}
+
   
